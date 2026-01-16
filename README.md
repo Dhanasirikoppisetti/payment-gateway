@@ -45,7 +45,7 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone <https://github.com/Dhanasirikoppisetti/payment-gateway>
 cd payment-gateway
 2. Start All Services
 ```
@@ -505,3 +505,69 @@ Manual Testing Checklist
  Can create order from dashboard button
 
  Checkout
+
+ ## 📸 Screenshots
+
+### Dashboard Application
+
+<table>
+  <tr>
+    <td><img src="docs/screenshots/01-login-page.png" alt="Login Page" width="400"/></td>
+    <td><img src="docs/screenshots/02-dashboard-home.png" alt="Dashboard" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Login Page</b></td>
+    <td align="center"><b>Merchant Dashboard with API Credentials</b></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="docs/screenshots/03-transactions-list.png" alt="Transactions" width="820"/></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><b>Transaction History</b></td>
+  </tr>
+</table>
+
+### Checkout Flow
+
+<table>
+  <tr>
+    <td><img src="docs/screenshots/04-checkout-initial.png" alt="Checkout" width="400"/></td>
+    <td><img src="docs/screenshots/05-checkout-upi-form.png" alt="UPI Form" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Checkout Page - Payment Method Selection</b></td>
+    <td align="center"><b>UPI Payment Form</b></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/06-checkout-card-form.png" alt="Card Form" width="400"/></td>
+    <td><img src="docs/screenshots/07-checkout-processing.png" alt="Processing" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Card Payment Form</b></td>
+    <td align="center"><b>Payment Processing State</b></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/08-checkout-success.png" alt="Success" width="400"/></td>
+    <td><img src="docs/screenshots/09-checkout-failed.png" alt="Failed" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Payment Success</b></td>
+    <td align="center"><b>Payment Failed</b></td>
+  </tr>
+</table>
+
+## 🎥 Demo Video
+
+**[📹 Watch Complete Demo on YouTube](https://youtu.be/4KSuhuzYth4)**
+
+The video demonstrates the complete end-to-end payment flow:
+- ✅ Starting all services with Docker Compose
+- ✅ Merchant dashboard login and authentication
+- ✅ API credentials and real-time statistics
+- ✅ Creating test payment orders
+- ✅ UPI payment processing with validation
+- ✅ Card payment processing with Luhn algorithm
+- ✅ Payment status polling and updates
+- ✅ Transaction history with complete details
+
+**Duration**: ~5.43 minutes
