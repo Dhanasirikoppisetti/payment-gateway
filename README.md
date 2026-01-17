@@ -571,3 +571,48 @@ The video demonstrates the complete end-to-end payment flow:
 - ✅ Transaction history with complete details
 
 **Duration**: ~5.43 minutes
+
+## ⚠️ Important Docker Usage Notice (For Reviewers)
+
+This project uses Docker Compose to run multiple services including PostgreSQL, Redis, API, background workers, dashboard, and checkout.
+
+### 🔹 Running Multiple Gateway Projects
+
+If you have another related project (for example, payment-gateway) that uses similar services and ports, please ensure only one project is running at a time.
+
+Docker does not allow multiple containers to bind to the same ports or reuse the same container names simultaneously.
+
+Before starting this project, stop any other running containers:
+
+docker compose down
+
+
+Or, if needed:
+
+docker stop $(docker ps -q)
+
+### 🔹 Ports Used by This Project
+Service	Port
+API	8000
+Dashboard	3000
+Checkout	3001
+PostgreSQL	5432
+Redis	6379
+
+Please ensure these ports are free before running:
+
+docker compose up -d
+
+### 🔹 Clean Reset (Recommended for Evaluation)
+
+For a fully clean and reproducible environment:
+
+docker compose down -v
+docker compose up -d
+
+
+This will reset the database and reinitialize all required schema and seed data automatically.
+
+### ✅ Note
+
+This behavior is standard for Docker-based projects and does not affect functionality when projects are run independently, which is the expected evaluation workflow.
